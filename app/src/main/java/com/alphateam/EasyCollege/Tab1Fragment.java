@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.alphateam.EasyCollege;
+package com.alphateam.easycollege;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -155,9 +155,9 @@ public class Tab1Fragment extends Fragment {
 		int id = item.getItemId();
 
 		//noinspection SimplifiableIfStatement
-		if (id == R.id.action_settings) {
+		/*if (id == R.id.action_settings) {
 			return true;
-		}
+		}*/
 
 		return super.onOptionsItemSelected(item);
 	}

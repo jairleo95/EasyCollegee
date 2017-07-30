@@ -1,7 +1,7 @@
 /**
  *
  */
-package com.alphateam.EasyCollege;
+package com.alphateam.easycollege;
 
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -31,6 +31,8 @@ public class Tab3Fragment extends Fragment {
 		View view = inflater.inflate(R.layout.tab_frag3_layout,container, false);
 		Button notTwoBtn = (Button) view.findViewById(R.id.notificationTwo);
 		Button btnMapa =(Button)view.findViewById(R.id.bntMapa);
+		Button btnTask =(Button)view.findViewById(R.id.btntask);
+		Button btnMain =(Button)view.findViewById(R.id.btnMain);
 		notTwoBtn.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View view) {
 				displayNotificationTwo();
@@ -41,6 +43,20 @@ public class Tab3Fragment extends Fragment {
 			public void onClick(View v) {
 				Intent i = new Intent(getActivity().getApplicationContext(),Mapa.class);
 				startActivity(i);
+			}
+		});
+		btnTask.setOnClickListener(new View.OnClickListener(){
+			@Override
+			public void onClick(View v) {
+				Intent i = new Intent(getActivity().getApplicationContext(),MainActivity.class);
+				startActivity(i);
+			}
+		});
+		btnMain.setOnClickListener(new View.OnClickListener(){
+			@Override
+			public void onClick(View v) {
+			/*	Intent i = new Intent(getActivity().getApplicationContext(),Main.class);
+				startActivity(i);*/
 			}
 		});
 		return view;
@@ -69,7 +85,7 @@ public class Tab3Fragment extends Fragment {
 		// when the user presses the notification, it is auto-removed
 		mBuilder.setAutoCancel(true);
 		// Creates an implicit intent
-		Intent resultIntent = new Intent("com.alphateam.EasyCollege.TEL_INTENT", Uri.parse("tel:123456789"));
+		Intent resultIntent = new Intent("com.alphateam.easycollege.TEL_INTENT", Uri.parse("tel:123456789"));
 		resultIntent.putExtra("from", "alphateam");
 		TaskStackBuilder stackBuilder = TaskStackBuilder.create(getActivity().getApplicationContext());
 		stackBuilder.addParentStack(NotificationTwo.class);

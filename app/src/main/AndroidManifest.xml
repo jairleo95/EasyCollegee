@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.alphateam.EasyCollege" >
- <uses-sdk
-        android:minSdkVersion="12"
-        android:targetSdkVersion="19" />
+    package="com.alphateam.easycollege" >
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.VIBRATE"/>
-    <!-- <uses-permission android:name="com.app.blim.permission.MAPS_RECEIVE" />-->
      <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
      <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
      <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
      <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
      <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
      <permission
-         android:name="com.alphateam.EasyCollege.permission.MAPS_RECEIVE"
+         android:name="com.alphateam.easycollege.permission.MAPS_RECEIVE"
          android:protectionLevel="signature" />
 
      <uses-feature
@@ -21,26 +17,27 @@
          android:required="true" />
 
      <application
+         android:name=".AnalyticsApplication"
          android:allowBackup="true"
          android:icon="@mipmap/ic_launcher"
          android:label="@string/app_name"
          android:theme="@style/AppTheme" >
          <activity
-             android:name="com.alphateam.EasyCollege.TabsViewPagerFragmentActivity"
+             android:name=".Main"
              android:label="@string/app_name" >
              <intent-filter>
                  <action android:name="android.intent.action.MAIN" />
                  <category android:name="android.intent.category.LAUNCHER" />
              </intent-filter>
          </activity>
-         <activity android:name="com.alphateam.EasyCollege.Tab1Fragment"></activity>
-         <activity android:name="com.alphateam.EasyCollege.Tab2Fragment"></activity>
-         <activity android:name="com.alphateam.EasyCollege.Tab3Fragment"></activity>
-         <activity android:name=".Mapa"></activity>
+         <activity android:name="com.alphateam.easycollege.Tab1Fragment"></activity>
+         <activity android:name="com.alphateam.easycollege.Tab2Fragment"></activity>
+         <activity android:name="com.alphateam.easycollege.Tab3Fragment"></activity>
+         <activity android:name="com.alphateam.easycollege.Mapa"></activity>
          <activity
-             android:name=".NotificationTwo"
+             android:name="com.alphateam.easycollege.NotificationTwo"
              android:label="Details of Notification Two"
-             android:parentActivityName=".TabsViewPagerFragmentActivity">
+             android:parentActivityName=".Main">
                    <intent-filter>
                         <action android:name="com.alphateam.EasyCollege.TEL_INTENT" />
                         <category android:name="android.intent.category.DEFAULT" />
@@ -48,16 +45,37 @@
                     </intent-filter>
                     <meta-data
                         android:name="android.support.PARENT_ACTIVITY"
-                        android:value=".TabsViewPagerFragmentActivity"/>
+                        android:value=".Main"/>
          </activity>
+
+         <activity android:name=".MainActivity"/>
+
+         <activity android:name=".AddToDoActivity"
+             android:screenOrientation="portrait"
+             android:parentActivityName=".MainActivity"
+             />
+
+         <activity android:name=".AboutActivity"
+             android:label="@string/app_name"
+             android:parentActivityName=".MainActivity"
+             />
+
+         <activity android:name=".ReminderActivity"
+             android:label="@string/app_name"
+             />
+
+         <service android:name=".TodoNotificationService"/>
+         <service android:name=".DeleteNotificationService"
+             />
+         <activity android:name=".SettingsActivity"
+             android:parentActivityName=".MainActivity"/>
 
          <meta-data
              android:name="com.google.android.gms.version"
              android:value="@integer/google_play_services_version" />
          <meta-data
              android:name="com.google.android.maps.v2.API_KEY"
-             android:value="AIzaSyDcZBuzkykeMa_GfH4-kdMQqRjWr8zRQF4" />
-
+             android:value="AIzaSyDhELg5l8Senw1WA1HoRSfGD3PlRkAoWmE" />
      </application>
 
 

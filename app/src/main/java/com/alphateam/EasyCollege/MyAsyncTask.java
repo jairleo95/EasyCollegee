@@ -1,13 +1,14 @@
-package com.alphateam.EasyCollege;
+package com.alphateam.easycollege;
 
-import java.io.IOException;
-import org.apache.http.client.ClientProtocolException;
-import org.json.JSONException;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.AsyncTask;
+
+import org.json.JSONException;
+
+import java.io.IOException;
 
 public class MyAsyncTask extends AsyncTask<String,Void,Boolean>{
 
@@ -38,8 +39,8 @@ public class MyAsyncTask extends AsyncTask<String,Void,Boolean>{
         UploadImage uploadImage = new UploadImage();
         try {
             r = uploadImage.uploadPhoto(params[0]);
-        } catch (ClientProtocolException e) {
-            e.printStackTrace();
+       /* } catch (ClientProtocolException e) {
+            e.printStackTrace();*/
         } catch (IOException e) {
             e.printStackTrace();
         } catch (JSONException e) {

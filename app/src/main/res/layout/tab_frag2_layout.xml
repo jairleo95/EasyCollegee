@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="{relativePackage}.${activityClass}"
-    android:orientation="vertical"
-    android:background="#c67cff">
+    android:orientation="vertical">
 
   <Gallery
       android:id="@+id/gallery1"
@@ -24,3 +29,4 @@
       android:paddingRight="10dp"
       android:src="@drawable/abc_ratingbar_full_material" />
 </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

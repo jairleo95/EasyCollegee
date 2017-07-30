@@ -1,4 +1,4 @@
-package com.alphateam.EasyCollege;
+package com.alphateam.easycollege;
 
 public class CLatLng_GPS {
 	

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.alphateam.EasyCollege;
+package com.alphateam.easycollege;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

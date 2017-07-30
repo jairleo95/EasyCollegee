@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.alphateam.EasyCollege;
+package com.alphateam.easycollege;
 
 import android.content.Context;
 import android.content.res.TypedArray;

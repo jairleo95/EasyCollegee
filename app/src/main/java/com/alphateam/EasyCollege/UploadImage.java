@@ -1,4 +1,4 @@
-package com.alphateam.EasyCollege;
+package com.alphateam.easycollege;
 
 /**
  * Created by Jairleo95 on 07/09/2015.

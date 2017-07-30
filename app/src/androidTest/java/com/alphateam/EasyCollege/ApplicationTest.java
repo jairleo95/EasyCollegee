@@ -1,4 +1,4 @@
-package com.alphateam.EasyCollege;
+package com.alphateam.easycollege;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

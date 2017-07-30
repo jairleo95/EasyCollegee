@@ -1,4 +1,4 @@
-package com.alphateam.EasyCollege;
+package com.alphateam.easycollege;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import com.google.android.gms.maps.CameraUpdateFactory;
